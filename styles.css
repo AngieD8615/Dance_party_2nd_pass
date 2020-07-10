@@ -3,25 +3,57 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url(https://i.pinimg.com/originals/eb/28/b2/eb28b2fb0a06664fa1b55297f36d8324.jpg);
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: darkblue;
 }
 .title, .addDancerButton{
   padding:5px 12px;
-  float:right;
+  float:left;
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  background-color: rgb(212, 156, 235);
 }
 .title{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
   position:absolute;
+}
+
+img {
+  padding: 5px;
+  width: 150px;
+}
+
+.spinny{
+  border:1px;
+  border-radius:1px !important;
+  position:absolute;
+  -webkit-animation: rotation 1.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(359deg);
+  }
+}
+
+
+.slide {
+  position: relative;
+  animation: myfirst 5s 2;
+  animation-direction: alternate;
+}
+
+@keyframes myfirst {
+  0%   { left: 30px; top: 600px;}
+  50%  { left: 1100px; top: 600px;}
+  100% { left: 600px; top: 700px;}
 }
